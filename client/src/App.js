@@ -8,7 +8,7 @@ import Spinner from "./components/spinner/spinner.component";
 import ErrorBoundary from "./components/error-boundary/error-boundary.component";
 
 import { selectCurrentUser } from "./redux/user/user.selectors";
-import { checkUserSession } from "./redux/user.actions";
+import { checkUserSession } from "./redux/user/user.actions";
 import { GlobalStyle } from "./global.styles";
 
 const HomePage = lazy(() => import("./pages/homepage/homepage.component"));
