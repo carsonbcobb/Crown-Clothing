@@ -4,8 +4,11 @@ import { addItem } from "../../redux/cart/cart.actions";
 import CustomButton from "../custom-button/custom-button.component";
 import "./collection-item.styles";
 import {
-  BackgroundImage,
+  CollectionItemContainer,
   CollectionFooterContainer,
+  AddButton,
+  BackgroundImage,
+  NameContainer,
   PriceContainer,
 } from "./collection-item.styles";
 const CollectionItem = ({ item, addItem }) => {
@@ -18,9 +21,9 @@ const CollectionItem = ({ item, addItem }) => {
         <NameContainer>{name}</NameContainer>
         <PriceContainer>{price}</PriceContainer>
       </CollectionFooterContainer>
-      <CustomButton onClick={() => addItem(item)} inverted>
+      <AddButton onClick={() => addItem(item)} inverted>
         Add To Cart
-      </CustomButton>
+      </AddButton>
     </CollectionItemContainer>
   );
 };

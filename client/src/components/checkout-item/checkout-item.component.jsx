@@ -10,6 +10,7 @@ import {
   CheckoutItemContainer,
   ImageContainer,
   TextContainer,
+  QuantityContainer,
   RemoveButtonContainer,
 } from "./checkout-item.styles";
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {

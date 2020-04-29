@@ -1,7 +1,10 @@
 import React from "react";
 import CollectionItem from "../collection-item/collection-item.component";
-import "./preview-collection.styles";
-import { CollectionPreviewContainer } from "./preview-collection.styles";
+import {
+  CollectionPreviewContainer,
+  TitleContainer,
+  PreviewContainer,
+} from "./preview-collection.styles";
 
 const PreviewCollection = ({ title, items }) => (
   <CollectionPreviewContainer>
