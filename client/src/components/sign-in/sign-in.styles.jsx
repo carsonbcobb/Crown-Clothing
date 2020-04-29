@@ -11,6 +11,6 @@ export const ButtonsBarContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const TitleStyle = styled.h2`
+export const SignInTitle = styled.h2`
   margin: 10px 0;
 `;
