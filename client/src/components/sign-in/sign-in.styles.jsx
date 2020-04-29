@@ -6,7 +6,7 @@ export const SignInContainer = styled.div`
   flex-direction: column;
 `;
 
-export const ButtonsContainer = styled.div`
+export const ButtonsBarContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
