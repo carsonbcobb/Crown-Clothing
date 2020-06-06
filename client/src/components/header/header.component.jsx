@@ -12,12 +12,16 @@ import {
 	LogoContainer,
 	OptionsContainer,
 	OptionLink,
+	Title,
 } from "./header.styles";
 const Header = ({ currentUser, hidden, signOutStart }) => (
 	<HeaderContainer>
 		<LogoContainer to="/">
 			<Logo />
 		</LogoContainer>
+		<Title>
+			<h1>Crown Clothing Company</h1>
+		</Title>
 
 		<OptionsContainer>
 			<OptionLink to="/shop">Shop</OptionLink>

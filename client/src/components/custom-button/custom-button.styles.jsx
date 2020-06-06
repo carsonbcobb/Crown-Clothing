@@ -1,61 +1,64 @@
 import styled, { css } from "styled-components";
 
 const buttonStyles = css`
-  background-color: black;
-  color: white;
-  border: none;
+	background-color: #424d58;
+	color: white;
+	border: none;
+	transition: 0.5s ease;
 
-  &:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-  }
+	&:hover {
+		background-color: #f8f8ff;
+		color: #424d58;
+	}
 `;
 
 const invertedButtonStyles = css`
-  background-color: white;
-  color: black;
-  border: 1px solid black;
+	background-color: #f8f8ff;
+	color: #424d58;
+	border: 1px solid #424d58;
+	transition: 0.5s ease;
 
-  &:hover {
-    background-color: black;
-    color: white;
-    border: none;
-  }
+	&:hover {
+		background-color: #424d58;
+		color: #f8f8ff;
+		border: none;
+	}
 `;
 
 const googleSignInStyles = css`
-  background-color: #4285f4;
-  color: white;
+	background-color: #4285f4;
+	color: #f8f8ff;
+	transition: 0.5s ease;
+	border: none;
 
-  &:hover {
-    background-color: #357ae8;
-    border: none;
-  }
+	&:hover {
+		background-color: #424d58;
+		border: none;
+	}
 `;
 
-const getButtonStyles = props => {
-  if (props.isGoogleSignIn) {
-    return googleSignInStyles;
-  }
+const getButtonStyles = (props) => {
+	if (props.isGoogleSignIn) {
+		return googleSignInStyles;
+	}
 
-  return props.inverted ? invertedButtonStyles : buttonStyles;
+	return props.inverted ? invertedButtonStyles : buttonStyles;
 };
 
 export const CustomButtonContainer = styled.button`
-  min-width: 165px;
-  width: auto;
-  height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-family: "Open Sans Condensed";
-  font-weight: bolder;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
+	min-width: 165px;
+	width: auto;
+	height: 50px;
+	letter-spacing: 0.5px;
+	line-height: 50px;
+	padding: 0 35px 0 35px;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-family: "Open Sans Condensed";
+	font-weight: bolder;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
 
-  ${getButtonStyles}
+	${getButtonStyles}
 `;

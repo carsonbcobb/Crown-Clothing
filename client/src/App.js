@@ -7,12 +7,12 @@ import Header from "./components/header/header.component";
 import Spinner from "./components/spinner/spinner.component";
 import ErrorBoundary from "./components/error-boundary/error-boundary.component";
 
-import { addCollectionAndDocuments } from "./firebase/firebase.utils";
-import { selectCurrentUser } from "./redux/user/user.selectors";
-import { checkUserSession } from "./redux/user/user.actions";
-import { selectCollectionsForPreview } from "./redux/shop/shop.selectors";
 import { GlobalStyle } from "./global.styles";
 
+import { selectCurrentUser } from "./redux/user/user.selectors";
+import { checkUserSession } from "./redux/user/user.actions";
+
+const ContactPage = lazy(() => import("./pages/contact/contact.component"));
 const HomePage = lazy(() => import("./pages/homepage/homepage.component"));
 const ShopPage = lazy(() => import("./pages/shop/shop.component"));
 const SignInAndSignUpPage = lazy(() =>
@@ -20,11 +20,10 @@ const SignInAndSignUpPage = lazy(() =>
 );
 const CheckoutPage = lazy(() => import("./pages/checkout/checkout.component"));
 
-const App = ({ checkUserSession, currentUser, collectionsArray }) => {
+const App = ({ checkUserSession, currentUser }) => {
 	useEffect(() => {
 		checkUserSession();
-		addCollectionAndDocuments("collections", collectionsArray);
-	}, [checkUserSession, collectionsArray]);
+	}, [checkUserSession]);
 
 	return (
 		<div>
@@ -35,6 +34,7 @@ const App = ({ checkUserSession, currentUser, collectionsArray }) => {
 					<Suspense fallback={<Spinner />}>
 						<Route exact path="/" component={HomePage} />
 						<Route path="/shop" component={ShopPage} />
+						<Route exact path="/contact" component={ContactPage} />
 						<Route exact path="/checkout" component={CheckoutPage} />
 						<Route
 							exact
@@ -52,12 +52,10 @@ const App = ({ checkUserSession, currentUser, collectionsArray }) => {
 
 const mapStateToProps = createStructuredSelector({
 	currentUser: selectCurrentUser,
-	collectionsArray: selectCollectionsForPreview,
 });
 
 const mapDispatchToProps = (dispatch) => ({
 	checkUserSession: () => dispatch(checkUserSession()),
-	addCollectionAndDocuments: () => dispatch(addCollectionAndDocuments()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
