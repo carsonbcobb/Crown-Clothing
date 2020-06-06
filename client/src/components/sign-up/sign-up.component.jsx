@@ -6,7 +6,11 @@ import CustomButton from "../custom-button/custom-button.component";
 
 import { signUpStart } from "../../redux/user/user.actions";
 
-import { SignUpContainer, SignUpTitle } from "./sign-up.styles";
+import {
+	SignUpContainer,
+	SignUpTitle,
+	SignUpTitleContainer,
+} from "./sign-up.styles";
 
 class SignUp extends React.Component {
 	constructor() {
@@ -43,8 +47,10 @@ class SignUp extends React.Component {
 		const { displayName, email, password, confirmPassword } = this.state;
 		return (
 			<SignUpContainer>
-				<SignUpTitle>I do not have a account</SignUpTitle>
-				<span>Sign up with your email and password</span>
+				<SignUpTitleContainer>
+					<SignUpTitle>I do not have an account</SignUpTitle>
+					<span>Sign up with your email and password</span>
+				</SignUpTitleContainer>
 				<form className="sign-up-form" onSubmit={this.handleSubmit}>
 					<FormInput
 						type="text"

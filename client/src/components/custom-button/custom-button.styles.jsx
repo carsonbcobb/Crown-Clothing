@@ -7,8 +7,8 @@ const buttonStyles = css`
 	transition: 0.5s ease;
 
 	&:hover {
-		background-color: #f8f8ff;
-		color: #424d58;
+		background-color: #778899;
+		color: #f8f8ff;
 	}
 `;
 
@@ -26,13 +26,13 @@ const invertedButtonStyles = css`
 `;
 
 const googleSignInStyles = css`
-	background-color: #4285f4;
+	background-color: #c15e5e;
 	color: #f8f8ff;
 	transition: 0.5s ease;
 	border: none;
 
 	&:hover {
-		background-color: #424d58;
+		background-color: #d08686;
 		border: none;
 	}
 `;

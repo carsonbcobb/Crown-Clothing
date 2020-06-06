@@ -8,10 +8,6 @@ export const CheckoutPageContainer = styled.div`
 	align-items: center;
 	margin: 50px auto 0;
 	color: #f8f8ff;
-	button {
-		margin-left: auto;
-		margin-top: 50px;
-	}
 	@media screen and (max-width: 800px) {
 		width: 90%;
 	}
@@ -19,14 +15,19 @@ export const CheckoutPageContainer = styled.div`
 
 export const CheckoutHeaderContainer = styled.div`
 	width: 100%;
-	height: 40px;
+	height: 50px;
 	display: flex;
-	justify-content: space-between;
-	border-bottom: 1px solid darkgrey;
+	justify-content: space-evenly;
+	align-items: center;
+	border-bottom: 1px solid #f8f8ff;
+	background-color: #424d58;
+	font-size: 1.2rem;
 `;
 
 export const HeaderBlockContainer = styled.div`
   text-transform: capitalize;
+  margin-left: 15px;
+  margin-right: 15px;
   width: 23%;
   &:last-child {
     width: 8%;
@@ -40,14 +41,43 @@ export const HeaderBlockContainer = styled.div`
 `;
 
 export const TotalContainer = styled.div`
-	margin-top: 30px;
 	margin-left: auto;
 	font-size: 36px;
+	background-color: #424d58;
+	border: 1px solid #f8f8ff;
+	padding: 2%;
+	display: block;
+	text-align: center;
+	transform: translateY(-50%);
+
+	.StripeCheckout {
+		background: #778898 !important;
+		text-shadow: none !important;
+		transition: 0.5s ease !important;
+
+		&:hover {
+			background: #95a2ac !important;
+		}
+
+		span {
+			background: #778898 !important;
+			box-shadow: unset !important;
+			color: #f8f8ff !important;
+			transition: 0.5s ease !important;
+			&:hover {
+				background: #95a2ac !important;
+			}
+		}
+	}
 `;
 
 export const WarningContainer = styled.div`
 	text-align: center;
-	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
 	font-size: 24px;
 	color: #912929;
+	margin-right: auto;
+	transform: translate(15%, 50%);
 `;

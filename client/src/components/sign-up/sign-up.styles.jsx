@@ -23,3 +23,9 @@ export const SignUpTitle = styled.h2`
 	margin: 10px 0;
 	font-size: 2rem;
 `;
+
+export const SignUpTitleContainer = styled.div`
+	background: #424d58;
+	padding: 15px;
+	color: #f8f8ff;
+`;

@@ -36,6 +36,7 @@ export const OptionsContainer = styled.div`
 	justify-content: flex-end;
 	font-size: 1.3rem;
 	color: #f8f8ff;
+	transform: translateY(10%);
 	svg {
 		path {
 			fill: #f8f8ff !important;
@@ -58,8 +59,12 @@ export const OptionLink = styled(Link)`
 
 export const Title = styled.div`
 	display: flex;
-	color: #424d58;
 	margin-left: 25px;
 	margin-right: auto;
 	transform: translateY(-10%);
+	a {
+		text-decoration: none;
+		cursor: pointer;
+		color: #424d58;
+	}
 `;

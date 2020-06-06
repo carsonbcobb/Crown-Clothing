@@ -20,7 +20,9 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
 			<Logo />
 		</LogoContainer>
 		<Title>
-			<h1>Crown Clothing Company</h1>
+			<a href="/">
+				<h1>Crown Clothing Company</h1>
+			</a>
 		</Title>
 
 		<OptionsContainer>

@@ -4,10 +4,12 @@ export const CheckoutItemContainer = styled.div`
 	width: 100%;
 	display: flex;
 	min-height: 100px;
-	border-bottom: 1px solid darkgrey;
+	border: 1px solid #f8f8ff;
 	padding: 15px 0;
 	font-size: 20px;
 	align-items: center;
+	background-color: #95a1ac;
+	color: #424d58;
 	@media screen and (max-width: 800px) {
 		font-size: 18px;
 	}
@@ -15,10 +17,11 @@ export const CheckoutItemContainer = styled.div`
 
 export const ImageContainer = styled.div`
 	width: 23%;
-	padding-right: 15px;
+	padding-right: 10px;
+	padding-left: 10px;
+
 	img {
-		width: 100%;
-		height: 100%;
+		width: 75%;
 	}
 `;
 

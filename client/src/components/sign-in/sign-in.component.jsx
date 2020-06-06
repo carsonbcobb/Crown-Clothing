@@ -13,6 +13,7 @@ import {
 	SignInContainer,
 	SignInTitle,
 	ButtonsBarContainer,
+	SignInTitleContainer,
 } from "./sign-in.styles";
 
 class SignIn extends React.Component {
@@ -43,8 +44,10 @@ class SignIn extends React.Component {
 		const { googleSignInStart } = this.props;
 		return (
 			<SignInContainer>
-				<SignInTitle>I already have an account</SignInTitle>
-				<span>Sign in with your email and password</span>
+				<SignInTitleContainer>
+					<SignInTitle>I already have an account</SignInTitle>
+					<span>Sign in with your email and password</span>
+				</SignInTitleContainer>
 
 				<form onSubmit={this.handleSubmit}>
 					<FormInput
@@ -52,7 +55,7 @@ class SignIn extends React.Component {
 						type="email"
 						handleChange={this.handleChange}
 						value={this.state.email}
-						label="email"
+						label="Email"
 						required
 					/>
 					<FormInput
@@ -60,13 +63,14 @@ class SignIn extends React.Component {
 						type="password"
 						value={this.state.password}
 						handleChange={this.handleChange}
-						label="password"
+						label="Password"
 						required
 					/>
 					<ButtonsBarContainer>
 						<CustomButton type="submit"> Sign in </CustomButton>
 						<CustomButton
 							type="button"
+							className="sign-in-button"
 							onClick={googleSignInStart}
 							isGoogleSignIn
 						>
