@@ -36,8 +36,11 @@ export const HeaderBlockContainer = styled.div`
     width: 22%
     &:last-child {
       width: 12%;
+		}
     }
-  }
+	@media only screen and (max-width: 414px) and (max-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+		font-size: 1rem;
+	}
 `;
 
 export const TotalContainer = styled.div`
@@ -69,6 +72,9 @@ export const TotalContainer = styled.div`
 			}
 		}
 	}
+	@media only screen and (max-width: 414px) and (max-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+		font-size: 1.5rem;
+	}
 `;
 
 export const WarningContainer = styled.div`
@@ -80,4 +86,14 @@ export const WarningContainer = styled.div`
 	color: #912929;
 	margin-right: auto;
 	transform: translate(15%, 50%);
+	@media only screen and (min-width: 1024px) and (max-height: 768px) and (-webkit-device-pixel-ratio: 2) {
+		font-size: 1rem;
+	}
+	@media only screen and (min-width: 1112px) and (max-height: 834px) and (-webkit-device-pixel-ratio: 2) {
+		font-size: 1rem;
+	}
+	@media only screen and (max-width: 414px) and (max-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+		font-size: 0.8rem;
+		transform: translate(-0.5%, 50%);
+	}
 `;

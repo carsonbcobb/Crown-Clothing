@@ -18,9 +18,14 @@ export const CollectionItemsContainer = styled.div`
 	& > div {
 		margin-bottom: 30px;
 	}
-	@media screen and (max-width: 800px) {
+
+	@media only screen and (max-width: 414px) and (max-height: 812px) and (-webkit-device-pixel-ratio: 3) {
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 15px;
+		grid-gap: 5px;
+	}
+	@media only screen and (max-width: 375px) and (max-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 5px;
 	}
 `;
 

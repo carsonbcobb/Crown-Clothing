@@ -30,6 +30,27 @@ export const MenuItemContainer = styled.div`
 	&:last-child {
 		margin-left: 7.5px;
 	}
+	@media only screen and (max-width: 414px) and (max-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+		max-width: 50%;
+		margin: 5px;
+		.content {
+			padding: 10px;
+		}
+	}
+	@media only screen and (max-width: 375px) and (max-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+		max-width: 50%;
+		margin: 5px;
+		.content {
+			padding: 10px;
+		}
+	}
+	@media only screen and (max-width: 320px) and (max-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+		max-width: 50%;
+		margin: 3px;
+		.content {
+			padding: 5px;
+		}
+	}
 `;
 
 export const BackgroundImageContainer = styled.div`

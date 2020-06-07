@@ -8,9 +8,6 @@ export const SignInContainer = styled.div`
 	text-align: center;
 	padding: 10px;
 
-	.sign-in-button {
-		padding: 0;
-	}
 	span {
 		font-size: 1rem;
 	}
